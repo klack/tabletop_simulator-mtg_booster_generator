@@ -654,6 +654,136 @@ setDefinitions = {
         getUrls = function(set)
             return BoosterUrls.default15CardPack({ "TLA", "TLE" })
         end,
+    },    
+    TLAPRW = {
+        packImage = "https://cards.scryfall.io/normal/front/2/4/245e008c-e073-443f-9592-6f628c0026ec.jpg",
+        name = "Avatar Pre-release Aang",
+        date = "2021-04-23",
+        getUrls = function(set)
+            local urls = {}
+            local setQuery = BoosterUrls.makeSetQuery('tla')
+            local setcolor = 'w'
+            local removeMultiColor = '+-c:m'
+            table.insert(urls, BoosterUrls.makeUrl(setQuery, 't:land+id>' .. setcolor .. '+id>1'))
+            for i = 1,5 do -- for common cards
+                table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+r:c'))
+            end
+            for i = 1,3 do -- for uncommon cards
+                table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+r:u'))
+            end
+            table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+' .. BoosterUrls.randomRarity(8000, 300, 36)))
+            table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+' .. BoosterUrls.randomRarity(800, 30, 3)))
+            table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+' .. BoosterUrls.randomRarity(80, 3, 1)))
+            for i = 1,2 do -- for 2 rare or higher
+                table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+' .. BoosterUrls.randomRarity(8, 1)))
+            end
+            table.insert(urls, 'https://api.scryfall.com/cards/tla/4') -- hero card
+            return urls
+        end,
+    },
+    TLAPRB = {
+        packImage = "https://cards.scryfall.io/normal/front/e/8/e8372167-383f-4302-a8ea-b6bf495c870c.jpg",
+        name = "Avatar Pre-release Katara",
+        date = "2021-04-23",
+        getUrls = function(set)
+            local urls = {}
+            local setQuery = BoosterUrls.makeSetQuery('tla')
+            local setcolor = 'b'
+            local removeMultiColor = '+-c:m'
+            table.insert(urls, BoosterUrls.makeUrl(setQuery, 't:land+id>' .. setcolor .. '+id>1'))
+            for i = 1,5 do -- for common cards
+                table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+r:c'))
+            end
+            for i = 1,3 do -- for uncommon cards
+                table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+r:u'))
+            end
+            table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+' .. BoosterUrls.randomRarity(8000, 300, 36)))
+            table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+' .. BoosterUrls.randomRarity(800, 30, 3)))
+            table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+' .. BoosterUrls.randomRarity(80, 3, 1)))
+            for i = 1,2 do -- for 2 rare or higher
+                table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+' .. BoosterUrls.randomRarity(8, 1)))
+            end
+            table.insert(urls, 'https://api.scryfall.com/cards/tla/59') -- hero card
+            return urls
+        end,
+    },
+    TLAPRU = {
+        packImage = "https://cards.scryfall.io/normal/front/1/3/1335a145-248a-4f1e-8760-9a5d531e14e3.jpg",
+        name = "Avatar Pre-release Azula",
+        date = "2021-04-23",
+        getUrls = function(set)
+            local urls = {}
+            local setQuery = BoosterUrls.makeSetQuery('tla')
+            local setcolor = 'u'
+            local removeMultiColor = '+-c:m'
+            table.insert(urls, BoosterUrls.makeUrl(setQuery, 't:land+id>' .. setcolor .. '+id>1'))
+            for i = 1,5 do -- for common cards
+                table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+r:c'))
+            end
+            for i = 1,3 do -- for uncommon cards
+                table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+r:u'))
+            end
+            table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+' .. BoosterUrls.randomRarity(8000, 300, 36)))
+            table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+' .. BoosterUrls.randomRarity(800, 30, 3)))
+            table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+' .. BoosterUrls.randomRarity(80, 3, 1)))
+            for i = 1,2 do -- for 2 rare or higher
+                table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+' .. BoosterUrls.randomRarity(8, 1)))
+            end
+            table.insert(urls, 'https://api.scryfall.com/cards/tla/85') -- hero card
+            return urls
+        end,
+    },
+    TLAPRR = {
+        packImage = "https://cards.scryfall.io/normal/front/6/a/6a73b372-9c0e-4a85-89d2-440163330687.jpg",
+        name = "Avatar Pre-release Zuko",
+        date = "2021-04-23",
+        getUrls = function(set)
+            local urls = {}
+            local setQuery = BoosterUrls.makeSetQuery('tla')
+            local setcolor = 'r'
+            local removeMultiColor = '+-c:m'
+            table.insert(urls, BoosterUrls.makeUrl(setQuery, 't:land+id>' .. setcolor .. '+id>1'))
+            for i = 1,5 do -- for common cards
+                table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+r:c'))
+            end
+            for i = 1,3 do -- for uncommon cards
+                table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+r:u'))
+            end
+            table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+' .. BoosterUrls.randomRarity(8000, 300, 36)))
+            table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+' .. BoosterUrls.randomRarity(800, 30, 3)))
+            table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+' .. BoosterUrls.randomRarity(80, 3, 1)))
+            for i = 1,2 do -- for 2 rare or higher
+                table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+' .. BoosterUrls.randomRarity(8, 1)))
+            end
+            table.insert(urls, 'https://api.scryfall.com/cards/tla/163') -- hero card
+            return urls
+        end,
+    }, 
+    TLAPRG = {
+        packImage = "https://cards.scryfall.io/normal/front/f/f/ff68fa7b-8065-407b-a8b4-bfbb14f1c99c.jpg",
+        name = "Avatar Pre-release Toph",
+        date = "2021-04-23",
+        getUrls = function(set)
+            local urls = {}
+            local setQuery = BoosterUrls.makeSetQuery('tla')
+            local setcolor = 'g'
+            local removeMultiColor = '+-c:m'
+            table.insert(urls, BoosterUrls.makeUrl(setQuery, 't:land+id>' .. setcolor .. '+id>1'))
+            for i = 1,5 do -- for common cards
+                table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+r:c'))
+            end
+            for i = 1,3 do -- for uncommon cards
+                table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+r:u'))
+            end
+            table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+' .. BoosterUrls.randomRarity(8000, 300, 36)))
+            table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+' .. BoosterUrls.randomRarity(800, 30, 3)))
+            table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+' .. BoosterUrls.randomRarity(80, 3, 1)))
+            for i = 1,2 do -- for 2 rare or higher
+                table.insert(urls, BoosterUrls.makeUrl(setQuery, '-t:basic+c:' .. setcolor .. removeMultiColor .. '+' .. BoosterUrls.randomRarity(8, 1)))
+            end
+            table.insert(urls, 'https://api.scryfall.com/cards/tla/198') -- hero card
+            return urls
+        end,
     },
     SPM = {
         packImage = "https://steamusercontent-a.akamaihd.net/ugc/11967831829609287872/6D168435BEFB1C1EE50A4F0B286BF4D8D9FEA7C8/",
