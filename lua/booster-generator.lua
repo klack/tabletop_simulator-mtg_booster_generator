@@ -688,7 +688,7 @@ setDefinitions = {
         getUrls = function(set)
             local urls = {}
             local setQuery = BoosterUrls.makeSetQuery('tla')
-            local setcolor = 'b'
+            local setcolor = 'u'
             local removeMultiColor = '+-c:m'
             table.insert(urls, BoosterUrls.makeUrl(setQuery, 't:land+id>' .. setcolor .. '+id>1'))
             for i = 1,5 do -- for common cards
@@ -714,7 +714,7 @@ setDefinitions = {
         getUrls = function(set)
             local urls = {}
             local setQuery = BoosterUrls.makeSetQuery('tla')
-            local setcolor = 'u'
+            local setcolor = 'b'
             local removeMultiColor = '+-c:m'
             table.insert(urls, BoosterUrls.makeUrl(setQuery, 't:land+id>' .. setcolor .. '+id>1'))
             for i = 1,5 do -- for common cards
